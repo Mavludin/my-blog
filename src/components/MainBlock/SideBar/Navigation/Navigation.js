@@ -4,23 +4,22 @@ import './Navigation.css';
 import blogIcon from '../../../../assets/images/blog.svg';
 import startIcon from '../../../../assets/images/star.svg';
 import settingsIcon from '../../../../assets/images/settings.svg';
-import { NavLink } from 'react-router-dom';
 
 export const Navigation = () => {
   return (
     <nav className='nav'>
-      <NavLink to='/blog' activeClassName='active'>
+      <a href='/' className='active'>
         <img src={blogIcon} alt='Blog' />
         <span>Blog</span>
-      </NavLink>
-      <NavLink to='/favourite' activeClassName='active'>
+      </a>
+      <a href='/'>
         <img src={startIcon} alt='Star' />
         <span>Favorite</span>
-      </NavLink>
-      <NavLink to='/settings' activeClassName='active'>
+      </a>
+      <a href='/'>
         <img src={settingsIcon} alt='Settings' />
         <span>Settings</span>
-      </NavLink>
+      </a>
     </nav>
   );
 };
